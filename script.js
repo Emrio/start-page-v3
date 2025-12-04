@@ -8,47 +8,35 @@
 
 const defaultCategories = [
     { id: 'dev', name: 'Development', icon: 'fa-solid fa-code' },
-    { id: 'social', name: 'Social', icon: 'fa-solid fa-users' },
     { id: 'media', name: 'Media', icon: 'fa-solid fa-play' },
-    { id: 'productivity', name: 'Productivity', icon: 'fa-solid fa-briefcase' }
+    { id: 'social', name: 'Social', icon: 'fa-solid fa-users' },
+    { id: 'school', name: 'School', icon: 'fa-solid fa-school' }
 ];
 
 const defaultLinks = {
     'dev': [
         { name: 'GitHub', url: 'https://github.com', icon: 'fa-brands fa-github' },
-        { name: 'GitLab', url: 'https://gitlab.com', icon: 'fa-brands fa-gitlab' },
         { name: 'Stack Overflow', url: 'https://stackoverflow.com', icon: 'fa-brands fa-stack-overflow' },
-        { name: 'CodePen', url: 'https://codepen.io', icon: 'fa-brands fa-codepen' },
-        { name: 'Vercel', url: 'https://vercel.com', icon: 'fa-solid fa-v' },
-        { name: 'Docker', url: 'https://docker.com', icon: 'fa-brands fa-docker' }
+        { name: 'OVH', url: 'https://ovh.com', icon: 'fa-solid fa-cloud' },
+        { name: 'Reddit', url: 'https://reddit.com', icon: 'fa-brands fa-reddit-alien' },
     ],
     'social': [
-        { name: 'Reddit', url: 'https://reddit.com', icon: 'fa-brands fa-reddit-alien' },
-        { name: 'Twitter', url: 'https://twitter.com', icon: 'fa-brands fa-x-twitter' },
-        { name: 'Discord', url: 'https://discord.com', icon: 'fa-brands fa-discord' },
         { name: 'LinkedIn', url: 'https://linkedin.com', icon: 'fa-brands fa-linkedin' },
-        { name: 'Mastodon', url: 'https://mastodon.social', icon: 'fa-brands fa-mastodon' },
-        { name: 'Twitch', url: 'https://twitch.tv', icon: 'fa-brands fa-twitch' }
+        { name: 'Twitter', url: 'https://twitter.com', icon: 'fa-brands fa-twitter' }
     ],
     'media': [
         { name: 'YouTube', url: 'https://youtube.com', icon: 'fa-brands fa-youtube' },
-        { name: 'Spotify', url: 'https://spotify.com', icon: 'fa-brands fa-spotify' },
-        { name: 'Netflix', url: 'https://netflix.com', icon: 'fa-solid fa-film' },
-        { name: 'SoundCloud', url: 'https://soundcloud.com', icon: 'fa-brands fa-soundcloud' },
-        { name: 'Prime Video', url: 'https://primevideo.com', icon: 'fa-brands fa-amazon' },
-        { name: 'Plex', url: 'https://plex.tv', icon: 'fa-solid fa-circle-play' }
+        { name: 'Youtube Music', url: 'https://music.youtube.com', icon: 'fa-solid fa-circle-play' },
+        { name: 'SpotifiX', url: 'https://spotifix.binets.fr', icon: 'fa-solid fa-music' },
+        { name: 'JTX', url: 'https://jtx.binets.fr/index', icon: 'fa-solid fa-video' }
     ],
-    'productivity': [
-        { name: 'Notion', url: 'https://notion.so', icon: 'fa-solid fa-book' },
-        { name: 'Gmail', url: 'https://mail.google.com', icon: 'fa-solid fa-envelope' },
-        { name: 'Calendar', url: 'https://calendar.google.com', icon: 'fa-solid fa-calendar-days' },
-        { name: 'Drive', url: 'https://drive.google.com', icon: 'fa-brands fa-google-drive' },
-        { name: 'Trello', url: 'https://trello.com', icon: 'fa-brands fa-trello' },
-        { name: 'Figma', url: 'https://figma.com', icon: 'fa-brands fa-figma' }
+    'school': [
+        { name: 'Synapses', url: 'https://synapses.telecom-paris.fr', icon: 'fa-solid fa-brain' },
+        { name: 'Moodle', url: 'https://moodle.ip-paris.fr', icon: 'fa-solid fa-book' }
     ]
 };
 
-const categoryColors = ['mauve', 'blue', 'red', 'green', 'peach', 'teal', 'pink', 'yellow'];
+const categoryColors = ['mauve', 'red', 'blue', 'green', 'peach', 'teal', 'pink', 'yellow'];
 
 // ========================================
 // Search Engine Configuration
@@ -102,11 +90,11 @@ function loadSettings() {
         theme: 'dark',
         colorMode: 'multi',
         timeFormat: '12',
-        tempUnit: 'F',
-        showQuotes: 'true',
-        enabledEngines: ['google', 'duckduckgo', 'github', 'youtube'],
+        tempUnit: 'C',
+        showQuotes: 'false',
+        enabledEngines: ['google', 'wikipedia', 'github', 'youtube'],
         preferredEngine: 'google',
-        weatherLocation: 'New York,NY,US',
+        weatherLocation: 'Paris,FR',
         openWeatherApiKey: ''
     };
     
